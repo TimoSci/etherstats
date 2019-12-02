@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## An Ethereum block explorer
 
-Things you may want to cover:
+## Dependencies
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Requires an instance of [parity](https://github.com/paritytech/parity-ethereum) or [geth](https://github.com/ethereum/go-ethereum/wiki/geth) running in the same environment.
