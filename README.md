@@ -1,6 +1,4 @@
-# README
-
-## An Ethereum block explorer
+# Etherstats - An Ethereum block explorer
 
 ## Dependencies
 
