@@ -12,7 +12,8 @@ class Connection
     end
 
     def latest_block
-      block = connection.eth_getBlockByNumber('latest', true)
+       number = client.eth_get_block_by_number('latest', true)["result"]["number"]
+       number.to_i(16)
     end
 
     def gas_price

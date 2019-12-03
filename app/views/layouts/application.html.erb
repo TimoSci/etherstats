@@ -7,9 +7,26 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+
+    <header>
+      <div id="logo">
+      <span id="logo1">Ether</span><span id="logo2">Stats</span>
+      </div>
+      <form id="search">
+          <input type="text" name="pattern">
+      </form>
+    </header>
+
     <%= yield %>
+
+    <footer>
+      Donate: Ether: Bitcoin:
+    </footer>
+
   </body>
+
 </html>

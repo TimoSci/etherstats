@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css?family=Nova+Round&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+
+body {
+  font-family: monospace;
+  /* background-color: #3c283c; */
+  background-color: #403040;
+  color: white;
+  /* margin-left: 4%; */
+  border: 1px;
+  margin: 2%;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  /* font-family: 'Nova Round', cursive; */
+  font-family: 'Alata', sans-serif;
+  /* font-family: monospace; */
+  font-size: 400%;
+  color: #FFB264;
+  text-align: center;
+  /* margin-left: 4%; */
+}
+
+#logo2{
+  opacity: 0.6;
+}
+
+input{
+  opacity:0.9;
+  font-size: 40%;
+}
+
+menu {
+
+}
+
+
+footer {
+
+}
