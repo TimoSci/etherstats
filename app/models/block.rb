@@ -1,5 +1,19 @@
 class Block < Hash
 
+  class << self
+    attr_accessor :blockchain
+
+    def latest
+      block = client.eth_get_block_by_number('latest', true)["result"]
+      Block.new.merge(block)
+    end
+
+    def client
+      self.blockchain.connection.client
+    end
+
+  end
+
   @@keys = ["author",
  "difficulty",
  "extraData",
@@ -29,9 +43,8 @@ class Block < Hash
     end
   end
 
-  def self.latest
-    puts "<<<placeholder for latest block>>>"
-  end
+
+  #===
 
 
 
