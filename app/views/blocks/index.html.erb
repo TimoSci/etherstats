@@ -5,4 +5,4 @@
 
 
 <p> gas price: <%= @connection.gas_price =%>  </p>
-<p> latest block:  <%= @latest_block.number =%> </p>
+<p> latest block:  <%= @latest_block.number.to_i(16) =%> </p>
