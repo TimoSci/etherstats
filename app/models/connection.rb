@@ -18,13 +18,8 @@ class Connection
       add_short_commands(@client)
     end
 
-    def latest_block_number
-       latest_block[:number].to_i(16)
-    end
-
-    def latest_block
-       block = client.eth_get_block_by_number('latest', true)["result"]
-       Block.new.merge(block)
+    def block_number
+       client.block_number_.to_i(16)
     end
 
     def gas_price

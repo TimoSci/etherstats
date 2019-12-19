@@ -37,27 +37,32 @@ class Block < Hash
     uncles
   ]
 
+
   class << self
+
     attr_accessor :blockchain
 
     def latest
-      connection.client.eth_block_number['result'].to_i(16)
-      # block = client.eth_get_block_by_number('latest', true)['result']
-      # Block.new.merge(block)
+      block = client.get_block_by_number_('latest', true)
+      new.merge(block)
     end
 
     def find_by_number(number)
-      block = client.eth_get_block_by_number(number, true)['result']
-      Block.new.merge(block)
+      block = client.get_block_by_number_(number, true)
+      new.merge(block)
     end
 
-    def find_latest(number)
-      latest_number = latest.number
-      (latest.number..)
+    def find_latest(count)
+      latest_number = connection.block_number
+      ((latest.number-count+1)..latest_number).map{|number| find_by_number(number)}
     end
 
     def client
       blockchain.connection.client
+    end
+
+    def connection
+      blockchain.connection
     end
 
   end
