@@ -25,6 +25,7 @@ body {
   /* margin-left: 4%; */
   border: 1px;
   margin: 2%;
+  margin-left: 4%;
 }
 
 header {
@@ -37,6 +38,15 @@ header {
   color: #FFB264;
   text-align: center;
   /* margin-left: 4%; */
+}
+
+table {
+  text-align: left;
+  /* margin-left: 4%; */
+}
+
+td{
+  padding:1px;
 }
 
 #logo2{

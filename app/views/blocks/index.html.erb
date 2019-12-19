@@ -5,4 +5,30 @@
 
 
 <p> gas price: <%= @connection.gas_price =%>  </p>
-<p> latest block:  <%= @latest_block.number.to_i(16) =%> </p>
+
+
+<table style="width:100%">
+
+<tr>
+  <th>Block Number</th>
+  <th>Size</th>
+  <th>Transactions</th>
+  <th>Difficulty</th>
+  <th>Total Difficulty</th>
+  <th>Gas Used</th>
+  <th>Time</th>
+</tr>
+
+<% @latest_blocks.each do |block| %>
+  <tr>
+    <td><%= block.number =%></td>
+    <td><%= block.size =%></td>
+    <td><%= block.transactions.size =%></td>
+    <td><%= block.difficulty =%></td>
+    <td><%= block.total_difficulty =%></td>
+    <td><%= block.gas_used =%></td>
+    <td><%= Time.at(block.timestamp) =%></td>
+  </tr>
+<% end %>
+
+</table>
