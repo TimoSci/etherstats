@@ -10,8 +10,9 @@ class Connection
     include RpcCommands
 
     attr_reader :client
+    # @endpoint = 'http://192.168.1.106:8545'
 
-    def initialize(client=Ethereum::HttpClient.new('http://localhost:8545'))
+    def initialize(client=Ethereum::HttpClient.new(Rails.configuration.geth_endpoint))
       @client = client
        # @connection = JSONRPC::Client.new("http://localhost:8545")
        # @connection = JSONRPC::Client.new("http://89.207.129.69:8545")
