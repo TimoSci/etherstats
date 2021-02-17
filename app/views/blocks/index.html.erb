@@ -14,18 +14,17 @@
   <th>Size</th>
   <th>Transactions</th>
   <th>Difficulty</th>
-  <th>Total Difficulty</th>
+
   <th>Gas Used</th>
   <th>Time</th>
 </tr>
 
-<% @latest_blocks.each do |block| %>
+<% @latest_blocks.sort_by{|b| -b.number}.each do |block| %>
   <tr>
     <td><%= block.number =%></td>
     <td><%= block.size =%></td>
     <td><%= block.transactions.size =%></td>
     <td><%= block.difficulty =%></td>
-    <td><%= block.total_difficulty =%></td>
     <td><%= block.gas_used =%></td>
     <td><%= Time.at(block.timestamp) =%></td>
   </tr>
