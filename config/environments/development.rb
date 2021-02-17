@@ -63,6 +63,7 @@ Rails.application.configure do
   #
   # ===
 
-  config.geth_endpoint = 'http://192.168.1.106:8545'
+  # config.geth_endpoint = 'http://192.168.1.106:8545'
+  config.geth_endpoint = ENV["GETH_ENDPOINT"]
 
 end
