@@ -30,15 +30,31 @@ body {
 
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: flex-end;
   /* font-family: 'Nova Round', cursive; */
   font-family: 'Alata', sans-serif;
   /* font-family: monospace; */
-  font-size: 400%;
+  font-size: 300%;
   color: #FFB264;
-  text-align: center;
+  /* text-align: center; */
   /* margin-left: 4%; */
 }
+
+#search {
+  display: flex;
+  align-items: flex-end;
+}
+
+#logo {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* #search-input {
+  display: flex;
+  align-items: center;
+} */
 
 table {
   text-align: left;
