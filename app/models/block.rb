@@ -54,7 +54,9 @@ class Block < Hash
 
     def find_latest(count)
       latest_number = connection.block_number
-      ((latest.number-count+1)..latest_number).map{|number| find_by_number(number)}
+      lowest = latest.number-count+1
+      lowest = 0 if lowest < 0
+      (lowest..latest_number).map{|number| find_by_number(number)}
     end
 
     def client
