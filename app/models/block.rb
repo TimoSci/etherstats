@@ -1,4 +1,4 @@
-class Block < Hash
+class Block < EthereumObject
   @keys = {}
   @keys[:data] =
   %w[
@@ -40,7 +40,6 @@ class Block < Hash
 
   class << self
 
-    attr_accessor :blockchain
 
     def latest
       block = client.get_block_by_number_('latest', true)
@@ -57,14 +56,6 @@ class Block < Hash
       lowest = latest.number-count+1
       lowest = 0 if lowest < 0
       (lowest..latest_number).map{|number| find_by_number(number)}
-    end
-
-    def client
-      blockchain.connection.client
-    end
-
-    def connection
-      blockchain.connection
     end
 
   end
