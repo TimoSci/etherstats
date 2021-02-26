@@ -60,6 +60,10 @@ class Block < EthereumObject
 
   end
 
+  def transactions
+    self["transactions"].map{|t| Transaction.new.merge(t) }
+  end
+
 
   @keys[:quantity].each do |key|
     define_method(key.underscore) do
