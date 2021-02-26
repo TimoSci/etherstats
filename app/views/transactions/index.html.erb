@@ -1,0 +1,28 @@
+
+
+<h2>Latest Transactions</h2>
+
+<table style="width:100%">
+
+<tr>
+  <th>From Addr</th>
+  <th>To Addr</th>
+  <th>Amount</th>
+  <th>Gas</th>
+  <th>Index</th>
+  <th>Hash</th>
+</tr>
+
+<% @latest_transactions.each do |transaction| %>
+  <tr>
+    <td><%= transaction.from =%></td>
+    <td><%= transaction.to =%></td>
+    <td><%= transaction.value/1.0e18 =%></td>
+    <td><%= transaction.gas =%></td>
+    <td><%= transaction.transaction_index =%></td>
+    <td><%= transaction.hash =%></td>
+
+  </tr>
+<% end %>
+
+</table>

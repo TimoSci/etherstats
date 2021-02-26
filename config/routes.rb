@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  
+
+  get 'transactions/index'
+  get 'transactions/show'
   # root to: 'blocks/index', controller: 'blocks', action: 'index'
   root to: 'blocks#index'
 

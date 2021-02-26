@@ -40,7 +40,6 @@ class Block < EthereumObject
 
   class << self
 
-
     def latest
       block = client.get_block_by_number_('latest', true)
       new.merge(block)
@@ -60,7 +59,8 @@ class Block < EthereumObject
 
   end
 
-  def transactions
+
+  def transaction_objects
     self["transactions"].map{|t| Transaction.new.merge(t) }
   end
 
